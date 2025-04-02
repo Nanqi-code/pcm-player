@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCM音频播放器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PCM音频播放器</h1>
+        <div class="upload-section">
+            <input type="file" id="pcmFile" accept=".pcm">
+            <p class="upload-text">点击或拖拽PCM文件到此处播放</p>
+        </div>
+        <div class="player-section">
+            <audio id="audioPlayer" controls></audio>
+            <div class="audio-info">
+                <p>采样率: <input type="number" id="sampleRateInput" value="16000" min="8000" max="48000" step="1000"> Hz</p>
+                <p>声道数: <input type="number" id="channelsInput" value="1" min="1" max="2" step="1">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <p>位深度: <span id="bitDepth">16</span> bits</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
